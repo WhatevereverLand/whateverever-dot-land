@@ -1,0 +1,23 @@
+{
+  "name": "whateverever-dot-land",
+  "version": "0.0.2",
+  "dependencies": {
+		"express": "*",
+		"lodash": "*"
+  },
+  "devDependencies": {
+	"gulp": "3.8.x",
+	"gulp-stylus": "1.3.x",
+	"gulp-minify-css": "0.3.x",
+	"gulp-nodemon": "1.0.x",
+	"gulp-task-listing": "0.3.x",
+	"gulp-rename": "1.2.x",
+	"gulp-rimraf": "0.1.x",
+	"gulp-livereload": "2.x.x",
+	"gulp-concat": "2.3.x",
+	"gulp-uglify": "0.3.x",
+	"gulp-mocha": "1.x.x",
+	"chai": "1.9.1",
+	"sinon": "1.x.x"
+  }
+}
