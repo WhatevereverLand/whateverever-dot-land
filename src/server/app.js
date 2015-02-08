@@ -1,7 +1,9 @@
 var express = require('express');
 var app = new express();
 
-var staticPath = __dirname + '../../dist'
+var staticPath = __dirname + '/../../dist'
+
+console.log('static path is', staticPath);
 
 app.use('/', express.static(staticPath));
 
