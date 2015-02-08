@@ -12,11 +12,11 @@ var concat = require('gulp-concat');
 var nodemon = require('gulp-nodemon');
 
 var options = {
-	stylusFiles: '.src/public/styles/**/*',
+	stylusFiles: './src/public/styles/**/*',
 	cssConcatName: 'weel.css',
 	javascriptFiles: './src/public/javascript/**/*',
 	javascriptConcatName: 'weel.js',
-	index: 'index.html',
+	pageFiles: 'index.html',
 	distPath: './dist',
 	readme: './README.md',
 	gulpfile: './gulpfile.js'
@@ -86,18 +86,13 @@ function notifyReadmeChange() {
 	gulp.watch(options.readme, projectChanged);
 }
 
-function notifyGulpfileChange() {
-	// Can you handle the meta!?
-	gulp.watch(options.gulpfile, projectChanged);
-}
-
 function notifyPartialsChange() {
 	gulp.watch(options.partialFiles, projectChanged);
 }
 
-function notifyIndexChange() {
-	gulp.watch(options.index, function handleIndexChange() {
-		buildIndex();
+function notifyPagesChange() {
+	gulp.watch(options.index, function handlePagesChange() {
+		buildPages();
 		projectChanged();
 	});
 }
@@ -144,8 +139,7 @@ gulp.task('build', [
  */
 gulp.task('watch-stylus', notifyStylusChange);
 gulp.task('watch-readme', notifyReadmeChange);
-gulp.task('watch-gulpfile', notifyGulpfileChange);
-gulp.task('watch-index', notifyIndexChange);
+gulp.task('watch-pages', notifyPagesChange);
 gulp.task('watch-startListener', startListener);
 
 gulp.task('serve', serve);
