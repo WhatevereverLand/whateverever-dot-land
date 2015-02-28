@@ -5,6 +5,7 @@
 		"express": "*",
 		"lodash": "*"
   },
+  "repository": "https://github.com/Whatevereverland/whateverever-dot-land",
   "devDependencies": {
 	"gulp": "3.8.x",
 	"gulp-stylus": "1.3.x",
