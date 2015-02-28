@@ -33,7 +33,7 @@ a
 
 .header
   height 250px
-  background url('/images/seal-transparent.svg')
+  background url('./images/seal-transparent.svg')
   background-size 250px 250px
   background-repeat no-repeat
   background-position center
@@ -58,4 +58,18 @@ small
 .subsection
   height 200px
   color black
+  &.contact
+    height 300px
 
+.contact-button
+  transition all 1s ease
+  border 0
+  background weelDarkBlue
+  font-family "Oswald"
+  font-size 20px
+  font-weight bold
+  color white
+  padding 10px
+  min-width 100px
+  &:hover
+    background weelLighterBlue
