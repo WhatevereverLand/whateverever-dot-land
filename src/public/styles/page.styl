@@ -1,8 +1,13 @@
-html
-  height 100
+@require('./colors.styl')
 
+html
+  height 100%
 
 body 
+  font-family "Lato"
+  color white
+  letter-spacing 1px
+  text-align center
   background rgba(23,42,66,1)
   background -moz-linear-gradient(top, rgba(23,42,66,1) 0%, rgba(21,31,46,1) 100%)
   background -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,42,66,1)), color-stop(100%, rgba(21,31,46,1)))
@@ -11,6 +16,46 @@ body
   background -ms-linear-gradient(top, rgba(23,42,66,1) 0%, rgba(21,31,46,1) 100%)
   background linear-gradient(to bottom, rgba(23,42,66,1) 0%, rgba(21,31,46,1) 100%)
   filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#172a42', endColorstr='#151f2e', GradientType=0 )")
-  height 100
+  height 100%
   background-repeat no-repeat
   background-attachment fixed
+  overflow-x hidden
+  overflow-y auto !important
+
+a 
+  text-decoration none
+  transition all .5s ease
+  &:visited, &:link, &:active
+    color weelOffWhite
+    font-weight bold
+  &:hover
+    color white
+
+.header
+  height 250px
+  background url('/images/seal-transparent.svg')
+  background-size 250px 250px
+  background-repeat no-repeat
+  background-position center
+
+.title
+  font-size 36px
+  font-family "Oswald"
+  font-weight bold
+  color white
+  text-transform uppercase
+
+.subtitle
+  font-size 24px
+  font-family "Oswald"
+  font-weight 400
+  color white
+  text-transform lowercase
+
+small
+  text-transform lowercase
+
+.subsection
+  height 200px
+  color black
+

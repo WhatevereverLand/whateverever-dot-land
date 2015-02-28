@@ -31,6 +31,7 @@ function buildCss() {
 
 function buildJavascript() {
 	gulp.src(options.javascriptFiles)
+    .pipe(concat('weel.js'))
 		.pipe(gulp.dest(options.distPath));
 }
 
